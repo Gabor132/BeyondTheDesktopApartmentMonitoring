@@ -18,7 +18,7 @@
         </md-card>
       </div>
     </maincard>
-    <md-card>
+    <md-card class="chart-container">
       <horizontalbarchartcard :chartdata="barchart.bardata" :options="barchart.baroptions"></horizontalbarchartcard>
       <piechartcard :chartdata="piechart.piedata" :options="piechart.pieoptions"></piechartcard>
       <linechartcard :chartdata="linechart.linedata" :options="linechart.lineoptions"></linechartcard>
@@ -32,9 +32,9 @@
 // Imports
 //
 import Maincard from "../components/cards/MainCard";
-import Piechartcard from "../components/cards/PieChartCard";
-import Linechartcard from "../components/cards/LineChartCard";
-import horizontalbarchartcard from "../components/cards/HorizontalBarChartCard";
+import Piechartcard from "../components/cards/charts/PieChartCard";
+import Linechartcard from "../components/cards/charts/LineChartCard";
+import horizontalbarchartcard from "../components/cards/charts/HorizontalBarChartCard";
 // Local Setup
 
 export default {
@@ -89,8 +89,6 @@ export default {
             text: '% of garbage produced by apartment',
             fontSize: '24'
           },
-          width:"5px",
-          height:"10px",
           responsive: true,
           maintainAspectRatio:false,
           scales: {
@@ -134,8 +132,6 @@ export default {
             text: '% of garbage properly recycled',
             fontSize: '24'
           },
-          width:"5px",
-          height:"20px",
           responsive: true,
           maintainAspectRatio:false
         }
@@ -178,8 +174,6 @@ export default {
             text: '% of garbage produced by category',
             fontSize: '24'
           },
-          width:"5px",
-          height:"20px",
           responsive: true,
           maintainAspectRatio:false,
           scales: {

@@ -1,17 +1,15 @@
 <template>
-    <md-card class="md-card-linechart md-card-secondary">
+    <md-card class="md-card-chart-medium md-card-secondary">
         <md-ripple>
             <md-content>
-                <div class="chart-container">
-                    <linechartcomponent :chartdata="chartdata" :options="options"></linechartcomponent>
-                </div>
+                <linechartcomponent :chartdata="chartdata" :options="options"></linechartcomponent>
             </md-content>
         </md-ripple>
     </md-card>
 </template>
 
 <script>
-    import Linechartcomponent from "../charts/LineChartComponent";
+    import Linechartcomponent from "../../charts/LineChartComponent";
     export default {
         name: "linechartcard",
         components: {
@@ -31,10 +29,4 @@
 </script>
 
 <style scoped>
-.md-card-linechart {
-    width: 30%;
-    margin: 4px;
-    display: inline-block;
-    vertical-align: top;
-}
 </style>

@@ -1,17 +1,15 @@
 <template>
-    <md-card class="md-card-doughnutchart md-card-secondary">
+    <md-card class="md-card-chart-small md-card-secondary">
         <md-ripple>
             <md-content>
-                <div class="chart-container">
-                    <doughnutchartcomponent :chartdata="chartdata" :options="options"></doughnutchartcomponent>
-                </div>
+                <doughnutchartcomponent :chartdata="chartdata" :options="options"></doughnutchartcomponent>
             </md-content>
         </md-ripple>
     </md-card>
 </template>
 
 <script>
-    import doughnutchartcomponent from "../charts/DoughnutChartComponent";
+    import doughnutchartcomponent from "../../charts/DoughnutChartComponent";
     export default {
         name: "doughnutchartcard",
         components: {
@@ -31,10 +29,4 @@
 </script>
 
 <style scoped>
-.md-card-doughnutchart {
-    width: 20%;
-    margin: 4px;
-    display: inline-block;
-    vertical-align: top;
-}
 </style>

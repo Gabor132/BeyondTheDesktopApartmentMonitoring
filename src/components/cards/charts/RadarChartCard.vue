@@ -1,17 +1,15 @@
 <template>
-    <md-card class="md-card-radarchart md-card-secondary">
+    <md-card class="md-card-chart-small">
         <md-ripple>
             <md-content>
-                <div class="chart-container">
-                    <radarchartcomponent :chartdata="chartdata" :options="options"></radarchartcomponent>
-                </div>
+                <radarchartcomponent :chartdata="chartdata" :options="options"></radarchartcomponent>
             </md-content>
         </md-ripple>
     </md-card>
 </template>
 
 <script>
-    import radarchartcomponent from "../charts/RadarChartComponent";
+    import radarchartcomponent from "../../charts/RadarChartComponent";
     export default {
         name: "radarchartcard",
         components: {
@@ -31,10 +29,4 @@
 </script>
 
 <style scoped>
-.md-card-radarchart {
-    width: 49%;
-    margin: 4px;
-    display: inline-block;
-    vertical-align: top;
-}
 </style>

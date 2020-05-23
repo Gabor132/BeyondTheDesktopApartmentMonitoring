@@ -18,7 +18,7 @@
         </md-card>
       </div>
     </maincard>
-    <md-card>
+    <md-card class="chart-container">
       <doughnutchartcard :chartdata="piechart.piedata" :options="piechart.pieoptions"></doughnutchartcard>
       <radarchartcard :chartdata="radarchart.radardata" :options="radarchart.radaroptions"></radarchartcard>
       <linechartcard :chartdata="linechart.linedata" :options="linechart.lineoptions"></linechartcard>
@@ -31,9 +31,9 @@
 // Imports
 //
 import maincard from "../components/cards/MainCard"
-import doughnutchartcard from "../components/cards/DoughnutChartCard"
-import linechartcard from "../components/cards/LineChartCard"
-import Radarchartcard from "../components/cards/RadarChartCard";
+import doughnutchartcard from "../components/cards/charts/DoughnutChartCard"
+import linechartcard from "../components/cards/charts/LineChartCard"
+import Radarchartcard from "../components/cards/charts/RadarChartCard";
 // Local Setup
 
 export default {
@@ -80,8 +80,6 @@ export default {
             text: '% of water consumption per person',
             fontSize: '24'
           },
-          width:"5px",
-          height:"20px",
           responsive: true,
           maintainAspectRatio:false
         }
@@ -103,8 +101,6 @@ export default {
             text: '% of water consumption per utility',
             fontSize: '24'
           },
-          width:"5px",
-          height:"10px",
           responsive: true,
           maintainAspectRatio:false,
           scales: {
@@ -137,10 +133,8 @@ export default {
           title: {
             display: true,
             text: 'Average water consumed per month, per time of day (liters)',
-            fontSize: '24'
+            fontSize: '20'
           },
-          width:"5px",
-          height:"20px",
           responsive: true,
           maintainAspectRatio:false,
         }

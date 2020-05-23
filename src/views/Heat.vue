@@ -18,7 +18,7 @@
         </md-card>
       </div>
     </maincard>
-    <md-card>
+    <md-card class="chart-container">
       <bubblechartcard :chartdata="bubblechart.bubbledata" :options="bubblechart.bubbleoptions"></bubblechartcard>
       <barchartcard :chartdata="barchart.bardata" :options="barchart.baroptions"></barchartcard>
       <linechartcard :chartdata="linechart.linedata" :options="linechart.lineoptions"></linechartcard>
@@ -33,9 +33,9 @@
 // Local Setup
 
 import maincard from "../components/cards/MainCard";
-import barchartcard from "../components/cards/BarChartCard";
-import linechartcard from "../components/cards/LineChartCard";
-import bubblechartcard from "../components/cards/BubbleChartCard";
+import barchartcard from "../components/cards/charts/BarChartCard";
+import linechartcard from "../components/cards/charts/LineChartCard";
+import bubblechartcard from "../components/cards/charts/BubbleChartCard";
 
 export default {
   name: "heat",
@@ -87,10 +87,8 @@ export default {
           title: {
             display: true,
             text: "% of heat consumption per person on apartment and building level",
-            fontSize: '24'
+            fontSize: '16'
           },
-          width:"5px",
-          height:"20px",
           responsive: true,
           maintainAspectRatio:false,
           scales: {
@@ -163,8 +161,6 @@ export default {
             text: '% Time spent in building vs % of heat consumed',
             fontSize: '20'
           },
-          width:"5px",
-          height:"10px",
           responsive: true,
           maintainAspectRatio:false,
           scales: {
@@ -216,8 +212,6 @@ export default {
             text: 'Amount of heat consumed per month (kWh/dw)',
             fontSize: '24'
           },
-          width:"5px",
-          height:"20px",
           responsive: true,
           maintainAspectRatio:false,
         }

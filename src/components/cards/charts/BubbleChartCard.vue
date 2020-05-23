@@ -1,17 +1,15 @@
 <template>
-    <md-card class="md-card-bubblechart md-card-secondary">
+    <md-card class="md-card-chart-small md-card-secondary">
         <md-ripple>
             <md-content>
-                <div class="chart-container">
-                    <bubblechartcomponent :chartdata="chartdata" :options="options"></bubblechartcomponent>
-                </div>
+                <bubblechartcomponent :chartdata="chartdata" :options="options"></bubblechartcomponent>
             </md-content>
         </md-ripple>
     </md-card>
 </template>
 
 <script>
-    import bubblechartcomponent from "../charts/BubbleChartComponent";
+    import bubblechartcomponent from "../../charts/BubbleChartComponent";
     export default {
         name: "bubblechartcard",
         components: {
@@ -30,10 +28,4 @@
 </script>
 
 <style scoped>
-.md-card-bubblechart {
-    width: 25%;
-    margin: 4px;
-    display: inline-block;
-    vertical-align: top;
-}
 </style>

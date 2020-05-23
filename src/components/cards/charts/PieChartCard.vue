@@ -1,17 +1,15 @@
 <template>
-    <md-card class="md-card-piechart md-card-secondary">
+    <md-card class="md-card-chart-small md-card-secondary">
         <md-ripple>
             <md-content>
-                <div class="chart-container">
-                    <piechartcomponent :chartdata="chartdata" :options="options"></piechartcomponent>
-                </div>
+                <piechartcomponent :chartdata="chartdata" :options="options"></piechartcomponent>
             </md-content>
         </md-ripple>
     </md-card>
 </template>
 
 <script>
-    import piechartcomponent from "../charts/PieChartComponent";
+    import piechartcomponent from "../../charts/PieChartComponent";
     export default {
         name: "piechartcard",
         components: {
@@ -31,10 +29,4 @@
 </script>
 
 <style scoped>
-.md-card-piechart {
-    width: 25%;
-    margin: 4px;
-    display: inline-block;
-    vertical-align: top;
-}
 </style>

@@ -51,6 +51,36 @@ body{
   }
 }
 
+.chart-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.md-card-chart-small{
+  width: 30%;
+  margin: 2px 4px !important;
+  display: inline-block;
+  flex-grow: 1;
+  vertical-align: top;
+}
+
+.md-card-chart-medium{
+  width: 32vw;
+  margin: 2px 4px !important;
+  display: inline-block;
+  flex-grow: 2;
+  vertical-align: top;
+}
+
+.md-card-chart-big{
+  width: 100%;
+  margin-left: 4px !important;
+  margin-right: 4px !important;
+  flex-grow: 3;
+  display: inline-block;
+  vertical-align: top;
+}
+
 .md-card-actions > .md-button{
   margin-right: 1vw;
 }

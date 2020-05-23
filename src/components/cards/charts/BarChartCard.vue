@@ -1,17 +1,15 @@
 <template>
-    <md-card class="md-card-barchart md-card-secondary">
+    <md-card class="md-card-chart-small md-card-secondary">
         <md-ripple>
             <md-content>
-                <div class="chart-container">
-                    <barchartcomponent :chartdata="chartdata" :options="options"></barchartcomponent>
-                </div>
+                <barchartcomponent :chartdata="chartdata" :options="options"></barchartcomponent>
             </md-content>
         </md-ripple>
     </md-card>
 </template>
 
 <script>
-    import barchartcomponent from "../charts/BarChartComponent";
+    import barchartcomponent from "../../charts/BarChartComponent";
     export default {
         name: "barchartcard",
         components: {
@@ -30,10 +28,4 @@
 </script>
 
 <style scoped>
-.md-card-barchart {
-    width: 44%;
-    margin: 4px;
-    display: inline-block;
-    vertical-align: top;
-}
 </style>

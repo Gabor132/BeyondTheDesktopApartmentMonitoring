@@ -18,7 +18,7 @@
         </md-card>
       </div>
     </maincard>
-    <md-card>
+    <md-card class="chart-container">
       <piechartcard :chartdata="piechart.piedata" :options="piechart.pieoptions"></piechartcard>
       <barchartcard :chartdata="barchart.bardata" :options="barchart.baroptions"></barchartcard>
       <linechartcard :chartdata="linechart.linedata" :options="linechart.lineoptions"></linechartcard>
@@ -33,9 +33,9 @@
 // Local Setup
 
 import maincard from "../components/cards/MainCard";
-import piechartcard from "../components/cards/PieChartCard";
-import barchartcard from "../components/cards/BarChartCard";
-import linechartcard from "../components/cards/LineChartCard";
+import piechartcard from "../components/cards/charts/PieChartCard";
+import barchartcard from "../components/cards/charts/BarChartCard";
+import linechartcard from "../components/cards/charts/LineChartCard";
 
 export default {
   name: "lights",
@@ -81,8 +81,6 @@ export default {
             text: '% of electricity consumption per person',
             fontSize: '24'
           },
-          width:"5px",
-          height:"20px",
           responsive: true,
           maintainAspectRatio:false
         }
@@ -124,8 +122,6 @@ export default {
             text: '% of electricity consumed per room',
             fontSize: '24'
           },
-          width:"5px",
-          height:"10px",
           responsive: true,
           maintainAspectRatio:false,
           scales: {
@@ -163,8 +159,6 @@ export default {
             text: 'Amount of electricity consumed per month (kWh)',
             fontSize: '24'
           },
-          width:"5px",
-          height:"20px",
           responsive: true,
           maintainAspectRatio:false,
         }
