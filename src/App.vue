@@ -39,7 +39,6 @@ import appcontent from "./components/AppContent.vue";
 import appnavbar from "./components/AppNavBar.vue";
 import apptitlebar from "./components/AppTitleBar.vue";
 import appnavdrawer from "./components/AppNavDrawer.vue";
-import axios from "axios";
 import Store from "./store";
 
 //
@@ -70,18 +69,6 @@ export default {
     apptitlebar,
     appnavbar,
     appnavdrawer
-  },
-  created: function() {
-    axios.interceptors.response.use(undefined, function(err) {
-      return new Promise(function() {
-        if (err.status === 401 && err.config && !err.config.__isRetryRequest) {
-          // if you ever get an unauthorized, logout the user
-          this.$store.dispatch("AUTH_LOGOUT");
-          // you can also redirect to /login if needed !
-        }
-        throw err;
-      });
-    });
   }
 };
 </script>

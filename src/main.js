@@ -9,7 +9,6 @@ import "vue-material/dist/vue-material.min.css";
 import "./registerServiceWorker";
 import axios from "axios";
 import VueMobileDetection from "vue-mobile-detection";
-import { RequestUIHandler } from "./javascript/request_ui_handler";
 
 const token = sessionStorage.getItem("access-token");
 if (token) {
@@ -27,18 +26,5 @@ new Vue({
   store: Store,
   render: h => h(App),
   mounted: function() {
-    this.$store
-      .dispatch("CLIENT_REQUEST")
-      .then(response => {
-        sessionStorage.setItem("clientInfo", JSON.stringify(response.data));
-        RequestUIHandler._getSuccessFunction(undefined, this.$store.state);
-      })
-      .catch(error => {
-        RequestUIHandler._getFailureFunction(
-          undefined,
-          error,
-          this.$store.state
-        );
-      });
   }
 }).$mount("#app");
