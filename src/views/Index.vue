@@ -10,7 +10,7 @@
                             <md-empty-state
                                     md-icon="emoji_people"
                                     :md-label="welcome_message"
-                                    md-description="Here is were you can check everything like the control freak that you are!"
+                                    md-description="Here is where you can check everything!"
                             >
                             </md-empty-state>
                         </md-card-content>
