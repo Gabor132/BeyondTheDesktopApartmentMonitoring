@@ -12,19 +12,19 @@
     "serve-prod": "vue-cli-service serve --mode production"
   },
   "dependencies": {
-    "bootstrap-vue": "^2.11.0",
-    "chart.js": "^2.9.3",
-    "core-js": "^3.6.4",
-    "date-fns": "^2.12.0",
+    "bootstrap-vue": "^2.19.0",
+    "chart.js": "^2.9.4",
+    "core-js": "^3.8.0",
+    "date-fns": "^2.16.1",
     "express": "^4.17.1",
     "serve-static": "^1.14.1",
-    "vue": "^2.6.11",
-    "vue-chartjs": "^3.5.0",
-    "vue-loader": "^15.9.1",
+    "vue": "^2.6.12",
+    "vue-chartjs": "^3.5.1",
+    "vue-loader": "^15.9.5",
     "vue-mobile-detection": "^1.0.0",
-    "vue-router": "^3.1.6",
+    "vue-router": "^3.4.9",
     "vue-store": "^0.3.1-moved",
-    "vuex": "^3.1.3"
+    "vuex": "^3.6.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",
@@ -34,12 +34,12 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "register-service-worker": "^1.7.1",
     "sass-loader": "^8.0.2",
-    "vue-material": "^1.0.0-beta-11",
-    "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.42.1"
+    "vue-material": "^1.0.0-beta-15",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.44.2"
   },
   "eslintConfig": {
     "root": true,
